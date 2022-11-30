@@ -1,3 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+	font-family: 'Sen', 'sans-serif';
+	@apply text-ink;
+}
+
+html,
+body {
+	@apply bg-cloud;
+}
+
+a {
+	@apply inline-block;
+}
+
+.container {
+	@apply max-w-4xl mx-auto;
+}
+
+.title {
+	@apply text-5xl font-bold mb-6;
+}
+
+.subtitle {
+	@apply text-2xl font-bold;
+}
+
+.paragraph {
+	@apply text-xl mb-8;
+}
+
+.button {
+	@apply px-8 py-3 rounded-full
+ text-cloud text-lg shadow-md
+  transition-all;
+}
+
+.button.small {
+	@apply px-6 py-2;
+}
+
+.button:hover {
+	@apply scale-95 shadow-lg;
+}

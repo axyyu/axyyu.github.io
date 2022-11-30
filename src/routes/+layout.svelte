@@ -1,5 +1,7 @@
 <script>
-  import "../app.css";
+	import '../app.css';
 </script>
 
-<slot />
+<div class="w-full h-full p-6 sm:p-8 md:p-16">
+	<slot />
+</div>

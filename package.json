@@ -12,8 +12,11 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
+		"@poppanator/sveltekit-svg": "^1.1.1",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"@types/d3-interpolate": "^3.0.1",
+		"@types/tinycolor2": "^1.4.3",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.13",
@@ -33,6 +36,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-static": "^1.0.0-next.48"
+		"@sveltejs/adapter-static": "^1.0.0-next.48",
+		"d3-interpolate": "^3.0.1",
+		"dayjs": "^1.11.6",
+		"tinycolor2": "^1.4.2"
 	}
 }
