@@ -11,10 +11,12 @@ module.exports = {
 				darkblue: '#021B79',
 				blue: '#0575E6',
 				// projects
-				glimmr: '#a951e8',
+				rainflower: '#A06CD5',
+				// glimmr: '#a951e8',
 				precisely: '#e71f54',
 				everest: '#173753',
-				discover: '#3273dc'
+				discover: '#3273dc',
+				hope: '#E04428'
 			}
 		}
 	},
