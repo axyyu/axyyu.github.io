@@ -32,12 +32,14 @@
 		background.set(value);
 	});
 
-	timeAngle.subscribe((value) => {
-		const _upper = getColorComplement(value, $background, 15);
-		const _lower = getColorComplement(value, $background, 20);
+	function updateColors(timeVal, bgColor) {
+		const _upper = getColorComplement(timeVal, bgColor, 15);
+		const _lower = getColorComplement(timeVal, bgColor, 20);
 		upperColor.set(_upper);
 		lowerColor.set(_lower);
-	});
+	}
+
+	$: updateColors($timeAngle, $background);
 </script>
 
 <div class="absolute h-full w-full top-0 bottom-0 left-0 right-0">

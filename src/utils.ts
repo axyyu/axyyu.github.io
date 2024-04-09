@@ -56,12 +56,12 @@ export function interpolateGradient(colors: string[]) {
 }
 
 export function getColorComplement(time: number, backgroundColor: string, delta: number): string {
-	const multiplier = Math.sin((time * Math.PI) / 360) * delta;
+	const multiplier = Math.sin((time * Math.PI) / 180) * delta;
 	let color = tinycolor(backgroundColor);
-	if (multiplier > 0) {
-		color = color.lighten(Math.abs(multiplier + delta));
+	if (multiplier < 0) {
+		color = color.lighten(Math.abs(multiplier));
 	} else {
-		color = color.darken(Math.abs(multiplier + delta));
+		color = color.darken(Math.abs(multiplier));
 	}
 	return color.toString();
 }

@@ -10,7 +10,7 @@
 
 	const upperColor = tweened(colors.ink, { duration: duration, interpolate: interpolateRgb });
 	const lowerColor = tweened(colors.ink, { duration: duration, interpolate: interpolateRgb });
-	let background = tweened(colors.ink, { duration: duration, interpolate: interpolateRgb });
+	const background = tweened(colors.ink, { duration: duration, interpolate: interpolateRgb });
 
 	onMount(() => {
 		generate();
@@ -30,12 +30,14 @@
 		background.set(value);
 	});
 
-	timeAngle.subscribe((value) => {
-		const _upper = getColorComplement(value, $background, 5);
-		const _lower = getColorComplement(value, $background, 10);
+	function updateColors(timeVal, bgColor) {
+		const _upper = getColorComplement(timeVal, bgColor, 5);
+		const _lower = getColorComplement(timeVal, bgColor, 10);
 		upperColor.set(_upper);
 		lowerColor.set(_lower);
-	});
+	}
+
+	$: updateColors($timeAngle, $background);
 </script>
 
 <div class="absolute h-full w-full top-0 bottom-0 left-0 right-0">

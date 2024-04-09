@@ -4,7 +4,17 @@
 	let greeting: string = 'Hello';
 
 	timeAngle.subscribe((value) => {
-		greeting = value > 180 ? 'Good evening' : value > 90 ? 'Good afternoon' : 'Good morning';
+		// 0 - morning
+		// 90 - noon
+		// 180 - evening
+		// 270 - midnight
+		if (value > 180) {
+			greeting = 'Good evening';
+		} else if (value > 90) {
+			greeting = 'Good afternoon';
+		} else {
+			greeting = 'Good morning';
+		}
 	});
 </script>
 
